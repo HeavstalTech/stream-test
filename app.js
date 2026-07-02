@@ -8,8 +8,6 @@ const movieIdInput = document.getElementById('movie-id')
 const loading = document.getElementById('loading')
 const errorMessage = document.getElementById('error-message')
 const backBtn = document.getElementById('back-btn')
-const API_URL = 'https://heavstal.com.ng/api/v1/movies/get'
-const API_KEY = 'ht_live_dc81c8539efe85ec3967a6a2f3be86a3'
 
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -18,11 +16,10 @@ searchForm.addEventListener('submit', async (e) => {
     errorMessage.classList.add('hidden')
     
     try {
-        const response = await fetch(API_URL, {
+        const response = await fetch('/api/movies', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': API_KEY
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({ id: parseInt(id) })
         });
