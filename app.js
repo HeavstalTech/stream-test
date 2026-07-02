@@ -1,4 +1,4 @@
-import WebTorrent from 'webtorrent';
+import WebTorrent from 'webtorrent/webtorrent.min.js';
 const client = new WebTorrent();
 let currentTorrent = null;
 const searchSection = document.getElementById('search-section')
