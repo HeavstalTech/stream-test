@@ -1,0 +1,16 @@
+{
+  "name": "movie-streamer",
+  "version": "1.0.0",
+  "description": "A movie streaming tester using Heavstal API and WebTorrent",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "webtorrent": "^3.0.16"
+  },
+  "devDependencies": {
+    "vite": "^8"
+  }
+}
